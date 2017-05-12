@@ -4,11 +4,9 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 var TodoApp = require("TodoApp");
 
-// Load foundation
-$(document).foundation();
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 // App css
-require('applicationStyles')
+require('applicationStyles');
 
 ReactDOM.render(
   <TodoApp></TodoApp>,

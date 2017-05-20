@@ -33,6 +33,12 @@ module.exports={
       return !todo.completed || showCompleted;
     });
 
+    filteredTodos = filteredTodos.filter((todo)=>{
+      var text = todo.text.toLowerCase();
+      return searchText.length === 0 || text.indexOf(searchText)>-1;
+    });
+
+
     filteredTodos.sort((a,b)=>{
       if(!a.completed && b.completed){
         return -1;
@@ -42,8 +48,6 @@ module.exports={
         return 0;
       }
     });
-
-
     return filteredTodos;
   }
 

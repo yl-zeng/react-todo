@@ -7,8 +7,10 @@ var TodoApp = require("TodoApp");
 import 'bootstrap/dist/css/bootstrap.min.css';
 // App css
 require('applicationStyles');
+require('todoStyles');
 
-localStorage.clear();
+
+// localStorage.clear();
 
 ReactDOM.render(
   <TodoApp></TodoApp>,

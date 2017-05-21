@@ -26,10 +26,14 @@ var Todo = React.createClass({
 
 
     return(
-      <div onClick={this.handleClick}>
-        <input type="checkbox" checked={completed}/>
-        <p>{text}</p>
-        <p>{renderDate()}</p>
+      <div className={todoClassName} onClick={this.handleClick}>
+        <div>
+          <input type="checkbox"  checked={completed}/>
+        </div>
+        <div>
+          <p>{text}</p>
+          <p className="todo__subtext">{renderDate()}</p>
+        </div>
       </div>
     )
   }

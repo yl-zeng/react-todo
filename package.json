@@ -1,13 +1,13 @@
 {
-  "name": "boilerplate",
+  "name": "",
   "version": "1.0.0",
-  "description": "Simple react app",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
     "start": "node server.js"
   },
-  "author": "Andrew Mead",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.9.1",

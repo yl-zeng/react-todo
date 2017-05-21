@@ -1,0 +1,25 @@
+input {
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+.main-window {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.window__add {
+  border-top: 1px solid #dddddd;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.window__message {
+  color: #999;
+  margin: 10px auto;
+  text-align:center;
+}

@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // App css
 require('applicationStyles');
 
+localStorage.clear();
+
 ReactDOM.render(
   <TodoApp></TodoApp>,
   document.getElementById('app')

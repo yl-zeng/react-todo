@@ -31,7 +31,8 @@ module.exports = {
       applicationStyles: 'app/styles/app.css',
       todoStyles:'app/styles/components/todo.css',
       actions: 'app/actions/actions.jsx',
-      reducers:  'app/reducers/reducers.jsx'
+      reducers:  'app/reducers/reducers.jsx',
+      configureStore: 'app/store/configureStore.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

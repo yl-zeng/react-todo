@@ -29,7 +29,9 @@ module.exports = {
     ],
     alias: {
       applicationStyles: 'app/styles/app.css',
-      todoStyles:'app/styles/components/todo.css'
+      todoStyles:'app/styles/components/todo.css',
+      actions: 'app/actions/actions.jsx',
+      reducers:  'app/reducers/reducers.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -37,7 +39,7 @@ module.exports = {
     loaders:[{
       loader:'babel-loader',
       query:{
-        presets:['react','es2015']
+        presets:['react','es2015','stage-2']
       },
       test:/\.jsx?$/,
       exclude:/(node-modules|bower_components)/

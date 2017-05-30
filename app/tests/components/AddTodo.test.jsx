@@ -5,30 +5,34 @@ var $ = require("jquery");
 var expect = require("expect");
 
 
-var AddTodo = require("AddTodo");
+var {AddTodo} = require("AddTodo");
 
 describe('AddTodo',()=>{
   it('should exist',()=>{
     expect(AddTodo).toExist();
   });
 
-  it("should call on AddTodo prop with valid data",()=>{
+  it("should dispatch ADD_TODO wehn valid todo text",()=>{
     var todoText = "Check mail";
+    var action = {
+      type:"ADD_TODO",
+      text: todoText
+    }
     var spy = expect.createSpy();
-    var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
+    var addTodo = TestUtils.renderIntoDocument(<AddTodo dispatch={spy}/>);
     var $el =  $(ReactDOM.findDOMNode(addTodo));
 
     addTodo.refs.todoText.value = todoText;
     TestUtils.Simulate.submit($el.find('form')[0]);
 
-    expect(spy).toHaveBeenCalledWith(todoText);
+    expect(spy).toHaveBeenCalledWith(action);
   });
 
 
-  it("should NOT call on AddTodo prop when invalid input",()=>{
+  it("should not dispatch ADD_TODO when invalid todoText",()=>{
     var todoText = "";
     var spy = expect.createSpy();
-    var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
+    var addTodo = TestUtils.renderIntoDocument(<AddTodo dispatch={spy}/>);
     var $el =  $(ReactDOM.findDOMNode(addTodo));
 
     addTodo.refs.todoText.value = todoText;

@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var {Provider} = require("react-redux");
+
 
 var TodoApp = require("TodoApp");
 
@@ -8,15 +10,17 @@ var actions = require("actions");
 
 var store = require("configureStore").configure();
 
-store.subscribe(()=>{
-  console.log("New State: ",store.getState());
+var TodoApi = require("TodoApi");
 
+store.subscribe(()=>{
+  var state = store.getState();
+  console.log("New State: ",state);
+
+  TodoApi.setTodos(state.todos);
 });
 
-store.dispatch(actions.addTodo("Clean the yard"));
-store.dispatch(actions.setSearchText("yard"));
-store.dispatch(actions.toggleShowCompleted());
-
+var initialTodos = TodoApi.getTodos();
+store.dispatch(actions.addTodos(initialTodos));
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // App css
@@ -27,6 +31,8 @@ require('todoStyles');
 // localStorage.clear();
 
 ReactDOM.render(
-  <TodoApp></TodoApp>,
+  <Provider store={store}>
+    <TodoApp/>
+  </Provider>,
   document.getElementById('app')
 );

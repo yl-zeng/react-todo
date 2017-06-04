@@ -28,6 +28,7 @@ module.exports = {
       './app/api'
     ],
     alias: {
+      app:'app',
       applicationStyles: 'app/styles/app.css',
       todoStyles:'app/styles/components/todo.css',
       actions: 'app/actions/actions.jsx',
@@ -43,7 +44,7 @@ module.exports = {
         presets:['react','es2015','stage-2']
       },
       test:/\.jsx?$/,
-      exclude:/(node-modules|bower_components)/
+      exclude:/(node_modules|bower_components)/
     },
     { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
     { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },

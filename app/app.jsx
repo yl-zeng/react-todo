@@ -5,12 +5,10 @@ var {Provider} = require("react-redux");
 
 
 var TodoApp = require("TodoApp");
-
 var actions = require("actions");
-
 var store = require("configureStore").configure();
-
 var TodoApi = require("TodoApi");
+
 
 store.subscribe(()=>{
   var state = store.getState();
@@ -26,6 +24,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // App css
 require('applicationStyles');
 require('todoStyles');
+
+
 
 
 // localStorage.clear();

@@ -20,6 +20,6 @@ console.log("NODE_ENV",process.env.NODE_ENV);
 console.log("API_KEY",process.env.API_KEY);
 
 
-
+export var githubProvider = new firebase.auth.GithubAuthProvider();
 export var firebaseRef = firebase.database().ref();
 export default firebase;

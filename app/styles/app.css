@@ -7,6 +7,17 @@ input {
   margin:50px 0 20px 0;
 }
 
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px 0 0;
+}
+
+.login-window{
+  text-align: center;
+  padding-bottom: 50px !important;
+}
+
 .main-window {
   background: #fafafa;
   border: 1px solid #eeeeee;

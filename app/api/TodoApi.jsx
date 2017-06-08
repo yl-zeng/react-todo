@@ -4,6 +4,15 @@ var $ = require("jquery");
 
 module.exports={
 
+  filterTodosForUser: function(todos,email){
+    var filterTodos = todos;
+    filterTodos = filterTodos.filter((todo)=>{
+      return todo.email===email;
+    });
+    return filterTodos;
+  },
+
+
   filterTodos: function(todos,showCompleted,searchText){
     var filteredTodos = todos;
 

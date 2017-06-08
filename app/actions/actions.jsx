@@ -49,13 +49,14 @@ export var startAddTodos = ()=>{
   };
 };
 
-export var startAddTodo = (text) =>{
+export var startAddTodo = (text,email) =>{
   return (dispatch,getState)=>{
     var todo = {
       text,
       completed:false,
       createdAt: moment().unix(),
-      completedAt: null
+      completedAt: null,
+      email
     };
     var todoRef = firebaseRef.child("todos").push(todo);
 

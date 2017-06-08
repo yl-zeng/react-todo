@@ -14,7 +14,8 @@ var requireLogin = (nextState,replace,next)=>{
 };
 
 var redirectIfLoggedIn = (nextState,replace,next)=>{
-  if(firebase.auth().currentUser){
+  var user = firebase.auth().currentUser;
+  if(user){
     replace('/todos');
   }
 

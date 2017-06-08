@@ -2,12 +2,16 @@ var React = require("react");
 import Todo from "Todo";
 var {connect} = require("react-redux");
 var TodoApi = require("TodoApi");
+import firebase from "firebase";
 
 export var TodoList = React.createClass({
   render:function(){
     var {todos, showCompleted, searchText} = this.props;
 
-    var filterTodos = TodoApi.filterTodos(todos,showCompleted,searchText);
+    var email = firebase.auth().currentUser.email.replace(".","+");
+    var curr_todos = TodoApi.filterTodosForUser(todos,email);
+
+    var filterTodos = TodoApi.filterTodos(curr_todos,showCompleted,searchText);
 
     var renderTodos = ()=>{
       if(filterTodos.length === 0){

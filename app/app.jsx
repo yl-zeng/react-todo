@@ -18,11 +18,6 @@ firebase.auth().onAuthStateChanged((user)=>{
 });
 
 
-
-
-store.dispatch(actions.startAddTodos());
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 // App css
 require('applicationStyles');

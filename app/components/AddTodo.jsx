@@ -1,15 +1,19 @@
 var React = require("react");
 var {connect} = require("react-redux");
 var actions = require("actions");
+import firebase from "firebase";
 
 export var AddTodo = React.createClass({
   handleSubmit: function(e){
     e.preventDefault();
     var todoText = this.refs.todoText.value;
     var {dispatch} = this.props;
+
+    var email = firebase.auth().currentUser.email.replace(".","+");
+
     if(todoText.length > 0){
       this.refs.todoText.value="";
-      dispatch(actions.startAddTodo(todoText));
+      dispatch(actions.startAddTodo(todoText,email));
     }else{
       this.refs.todoText.focus();
     }

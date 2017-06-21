@@ -4,8 +4,13 @@ var {connect} = require("react-redux");
 var TodoApi = require("TodoApi");
 import firebase from "firebase";
 
-export var TodoList = React.createClass({
-  render:function(){
+export class TodoList extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  render(){
     var {todos, showCompleted, searchText} = this.props;
 
     var email = firebase.auth().currentUser.email.replace(".","+");
@@ -35,7 +40,7 @@ export var TodoList = React.createClass({
       </div>
     )
   }
-});
+};
 
 
 export default connect(

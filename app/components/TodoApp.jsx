@@ -8,22 +8,26 @@ import * as actions from 'actions';
 import firebase from 'app/firebase/';
 
 
-export var TodoApp = React.createClass({
+export class TodoApp extends React.Component{
 
-  onLogout:function(e){
+  constructor(props){
+    super(props);
+  }
+
+  onLogout= (e)=>{
     var {dispatch} = this.props;
     e.preventDefault();
 
     dispatch(actions.startLogout());
-  },
+  }
 
-  componentWillMount:function(){
+  componentWillMount(){
     var {dispatch} = this.props;
     dispatch(actions.startAddTodos());
     console.log("email: ",firebase.auth().currentUser.email);
-  },
+  }
 
-  render:function(){
+  render(){
     return (
       <div className="container">
         <div className="row">
@@ -43,6 +47,6 @@ export var TodoApp = React.createClass({
       </div>
     );
   }
-});
+};
 
 export default Redux.connect()(TodoApp);

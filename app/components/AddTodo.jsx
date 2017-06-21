@@ -3,8 +3,12 @@ var {connect} = require("react-redux");
 var actions = require("actions");
 import firebase from "firebase";
 
-export var AddTodo = React.createClass({
-  handleSubmit: function(e){
+export class AddTodo extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  handleSubmit = (e)=>{
     e.preventDefault();
     var todoText = this.refs.todoText.value;
     var {dispatch} = this.props;
@@ -17,9 +21,9 @@ export var AddTodo = React.createClass({
     }else{
       this.refs.todoText.focus();
     }
-  },
+  }
 
-  render:function(){
+  render(){
     return (
       <div className="window__footer">
         <form onSubmit={this.handleSubmit}>
@@ -30,7 +34,7 @@ export var AddTodo = React.createClass({
       </div>
     );
   }
-});
+};
 
 
 export default connect()(AddTodo);

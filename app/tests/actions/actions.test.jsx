@@ -10,7 +10,7 @@ var createMockStore = configureMockStore([thunk]);
 
 
 
-describe("",()=>{
+describe("Actions",()=>{
   it("should generate set search text action",()=>{
     var action = {
       type: "SET_SEARCH_TEXT",
@@ -42,8 +42,9 @@ describe("",()=>{
 
     const store = createMockStore({});
     const todoText = "My todo Item";
+    const email = "ylinzeng69+gmail.com"
 
-    store.dispatch(actions.startAddTodo(todoText)).then(()=>{
+    store.dispatch(actions.startAddTodo(todoText,email)).then(()=>{
       const actions = store.getActions();
       expect(actions[0]).toInclude({
         type:"ADD_TODO"

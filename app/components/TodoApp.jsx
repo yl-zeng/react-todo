@@ -6,7 +6,7 @@ import AddTodo from "AddTodo";
 import TodoSearch from "TodoSearch";
 import * as actions from 'actions';
 import firebase from 'app/firebase/';
-
+import store from "configureStore";
 
 export class TodoApp extends React.Component{
 

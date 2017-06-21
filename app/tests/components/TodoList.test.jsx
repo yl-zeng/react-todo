@@ -23,13 +23,15 @@ describe('TodoList',()=>{
       text:"Do 1",
       completed:false,
       completedAt:undefined,
-      createdAt: 500
+      createdAt: 500,
+      email:"ylinzeng69+gmail.com"
     },{
       id:2,
       text:"Do 2",
       completed:false,
       completedAt:undefined,
-      createdAt: 500
+      createdAt: 500,
+      email:"ylinzeng69+gmail.com"
     }];
 
     var store = configure({

@@ -15,9 +15,10 @@ describe('AddTodo',()=>{
 
   it("should dispatch ADD_TODO wehn valid todo text",()=>{
     var todoText = "Check mail";
-    var action = actions.startAddTodo(todoText);
+    var email = "ylinzeng69+gmail.com"
+    var action = actions.startAddTodo(todoText,email);
 
-    
+
     var spy = expect.createSpy();
     var addTodo = TestUtils.renderIntoDocument(<AddTodo dispatch={spy}/>);
     var $el =  $(ReactDOM.findDOMNode(addTodo));
@@ -31,6 +32,7 @@ describe('AddTodo',()=>{
 
   it("should not dispatch ADD_TODO when invalid todoText",()=>{
     var todoText = "";
+    var email = "ylinzeng69+gmail.com"
     var spy = expect.createSpy();
     var addTodo = TestUtils.renderIntoDocument(<AddTodo dispatch={spy}/>);
     var $el =  $(ReactDOM.findDOMNode(addTodo));

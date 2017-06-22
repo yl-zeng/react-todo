@@ -35,7 +35,7 @@ export class Todo extends React.Component{
         <div>
           <input type="checkbox"  checked={completed}/>
         </div>
-        <div>
+        <div style={{paddingLeft:"6px"}}>
           <p>{text}</p>
           <p className="todo__subtext">{renderDate()}</p>
         </div>

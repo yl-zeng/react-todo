@@ -36,7 +36,7 @@ export class TodoApp extends React.Component{
             <a href="#" onClick={this.onLogout}><button className="btn btn-primary btn-block">Logout</button></a>
           </div>
         </div>
-        <h1 className="page-title text-center">Todo App</h1>
+        <h1 className="page-title text-center" style={{color:"#ffffff",fontSize:"350%"}}>Todo App</h1>
         <div className="row">
           <div className="col-sm-8 col-sm-offset-2 main-window">
             <TodoSearch/>

@@ -21,11 +21,10 @@ export class TodoSearch extends React.Component{
             }}/>
         </div>
         <div>
-          <lable><input type="checkbox" ref="showCompleted" checked={showCompleted} onChange={()=>{
+          <input type="checkbox" ref="showCompleted" checked={showCompleted} onChange={()=>{
               dispatch(actions.toggleShowCompleted());
             }}/>
-            Show Completed todos
-          </lable>
+          <p style={{color:"#dddddd",padding:"10px 0 0 6px"}}>Show Completed todos</p>
         </div>
       </div>
     );

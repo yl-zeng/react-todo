@@ -47,8 +47,9 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
+    background-size: 100% 100%;
     transform: translateX(-50%) translateY(-50%);
-  transition: 1s opacity;
+    transition: 1s opacity;
 }
 
 .login-window{

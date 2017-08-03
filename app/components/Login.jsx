@@ -55,13 +55,13 @@ export class Login extends React.Component{
                 <p className="fa fa-envelope fa-3x login-icon"></p>
               </div>
               <div className="col-sm-1 text-center">
-                <p className="fa fa-link fa-3x login-icon"></p>
+                <a href="http://yunlin.io/"><p className="fa fa-link fa-3x login-icon"></p></a>
               </div>
               <div className="col-sm-1 text-center">
-                <p className="fa fa-linkedin fa-3x login-icon"></p>
+                <a href="https://www.linkedin.com/in/yunlin-zeng-99a862115/"><p className="fa fa-linkedin fa-3x login-icon"></p></a>
               </div>
               <div className="col-sm-1 text-center">
-                <p className="fa fa-github fa-3x login-icon"></p>
+                <a href="https://github.com/yl-zeng"><p className="fa fa-github fa-3x login-icon"></p></a>
               </div>
             </div>
           </div>

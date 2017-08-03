@@ -21,7 +21,9 @@ export class Video extends React.Component{
   render(){
     return (
       <div>
-        <video id="vid" src={"/video/"+ this.props.count + ".mp4"} preload="auto" autoPlay muted onEnded={this.handleEnd}/>
+        <video id="vid" src={"/video/"+ this.props.count + ".mp4"}
+          style={{background:"transparent url('/img/back" + this.props.count + ".jpg') no-repeat 0 0"}}
+          preload="auto" autoPlay muted onEnded={this.handleEnd}/>
       </div>
     );
   }

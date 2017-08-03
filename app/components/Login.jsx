@@ -38,6 +38,21 @@ export class Login extends React.Component{
                 <h4><i className="fa fa-github" aria-hidden="true" style={{paddingRight:"10px"}}/>
                 Login with Github</h4>
             </button>
+            <hr/>
+            <div className="row" style={{paddingBottom:"0px"}}>
+              <div className="col-sm-1 col-sm-offset-4 text-center">
+                <p className="fa fa-envelope fa-3x login-icon"></p>
+              </div>
+              <div className="col-sm-1 text-center">
+                <p className="fa fa-link fa-3x login-icon"></p>
+              </div>
+              <div className="col-sm-1 text-center">
+                <p className="fa fa-linkedin fa-3x login-icon"></p>
+              </div>
+              <div className="col-sm-1 text-center">
+                <p className="fa fa-github fa-3x login-icon"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -54,12 +54,16 @@ video {
 .login-window{
   margin-top: 120px !important;
   text-align: center;
-  padding-bottom: 50px !important;
+  padding-bottom: 10px !important;
+}
+
+.login-icon{
+  color:rgba(255, 255, 255, 0.6);
 }
 
 .main-window {
   background: #fafafa;
-  background-color: rgb(0,0,0,0.6);
+  background-color: rgb(0,0,0,0.3);
   border: 1px solid #eeeeee;
   border-radius: 20px;
   padding-bottom: 10px;

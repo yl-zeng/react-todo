@@ -4,6 +4,9 @@ import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import {Video} from 'Video';
 
+import history from "app/history/history.jsx";
+import store from "configureStore";
+
 export class Login extends React.Component{
 
   constructor(props){
@@ -15,8 +18,12 @@ export class Login extends React.Component{
 
   onLogin = ()=>{
     var {dispatch} = this.props;
-
     dispatch(actions.startLogin());
+  }
+
+  onGuest = ()=>{
+    var {dispatch} = this.props;
+    history.push("/guest");
   }
 
   handleEnd = ()=>{
@@ -34,12 +41,16 @@ export class Login extends React.Component{
           <div className="col-sm-8 col-sm-offset-2 main-window login-window">
             <h1 style={{color:"#f3f3f3",fontSize:"350%"}}>Welcome to Todo!</h1>
             <h3 style={{color:"#f3f3f3"}}>Today will be great</h3>
-            <button className="btn btn-primary" style={{marginTop:"10px"}} onClick={this.onLogin}>
+            <button className="btn btn-primary" style={{marginTop:"10px",marginRight:"10px"}} onClick={this.onLogin}>
                 <h4><i className="fa fa-github" aria-hidden="true" style={{paddingRight:"10px"}}/>
                 Login with Github</h4>
             </button>
+            <button className="btn btn-danger" style={{marginTop:"10px"}} onClick={this.onGuest}>
+                <h4><i className="fa fa-user-o" aria-hidden="true" style={{paddingRight:"10px"}}/>
+                Login as Guest</h4>
+            </button>
             <hr/>
-            <div className="row" style={{paddingBottom:"0px"}}>
+            <div className="row">
               <div className="col-sm-1 col-sm-offset-4 text-center">
                 <p className="fa fa-envelope fa-3x login-icon"></p>
               </div>

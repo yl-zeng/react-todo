@@ -23,7 +23,7 @@ var requireLogin = (nextState,replace,next)=>{
 var redirectIfLoggedIn = (nextState,replace,next)=>{
   var user = firebase.auth().currentUser;
   if(user){
-    store.dispatch(push('/courses'));
+    store.dispatch(push('/todos'));
   }
 
   next();
@@ -33,6 +33,7 @@ var redirectIfLoggedIn = (nextState,replace,next)=>{
 export default (
   <Router history={history}>
     <div>
+      <Route path="/guest" component={TodoApp}/>
       <Route path="/todos" component={TodoApp} onEnter={requireLogin}/>
       <Route exact path="/" component={Login} onEnter={redirectIfLoggedIn}/>
     </div>

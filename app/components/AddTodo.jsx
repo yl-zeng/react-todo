@@ -13,7 +13,12 @@ export class AddTodo extends React.Component{
     var todoText = this.refs.todoText.value;
     var {dispatch} = this.props;
 
-    var email = firebase.auth().currentUser.email.replace(".","+");
+    var email = "";
+    if(firebase.auth().currentUser){
+      email = firebase.auth().currentUser.email.replace(".","+");
+    }else{
+      email = "guest@yunlin+io";
+    }
 
     if(todoText.length > 0){
       this.refs.todoText.value="";

@@ -13,7 +13,13 @@ export class TodoList extends React.Component{
   render(){
     var {todos, showCompleted, searchText} = this.props;
 
-    var email = firebase.auth().currentUser.email.replace(".","+");
+    var email = "";
+    if(firebase.auth().currentUser){
+      email = firebase.auth().currentUser.email.replace(".","+");
+    }else{
+      email = "guest@yunlin+io";
+    }
+
     var curr_todos = TodoApi.filterTodosForUser(todos,email);
 
     var filterTodos = TodoApi.filterTodos(curr_todos,showCompleted,searchText);

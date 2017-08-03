@@ -35,17 +35,25 @@ input {
 }
 
 video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    transition: 1s opacity;
+    display: none;
 }
+
+@media screen and (min-width: 1100px) {
+  video {
+      display: block;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+      transition: 1s opacity;
+  }
+}
+
 
 .login-window{
   margin-top: 120px !important;

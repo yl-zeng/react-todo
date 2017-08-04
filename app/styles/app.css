@@ -6,8 +6,6 @@ body {
   font-family: 'Pangolin', cursive;
   height:100%;
   width:100%;
-  background: url("/img/b.jpg") no-repeat center center;
-  background-size: cover;
 }
 
 input {
@@ -52,6 +50,37 @@ video {
       transform: translateX(-50%) translateY(-50%);
       transition: 1s opacity;
   }
+}
+
+.page{
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s opacity;
+  background: url("/img/b.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.page2{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s opacity;
+  background: url("/img/back2.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 

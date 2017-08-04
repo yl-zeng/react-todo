@@ -36,6 +36,7 @@ export class TodoApp extends React.Component{
   render(){
     return (
       <div className="container">
+        <div className="page2"/>
         <div className="row">
           <div className="col-sm-2 col-sm-offset-10 dashboard">
             <h5>{`${firebase.auth().currentUser?firebase.auth().currentUser.email:"guest@yunlin.io"}`}</h5>

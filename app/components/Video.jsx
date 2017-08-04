@@ -15,7 +15,7 @@ export class Video extends React.Component{
 
   render(){
     return (
-      <div>
+      <div className="page">
         <video id="vid" src="/video/video.mp4" preload="auto" loop autoPlay muted/>
       </div>
     );

@@ -6,9 +6,16 @@ body {
   font-family: 'Pangolin', cursive;
   height:100%;
   width:100%;
-  background: url("/img/back.jpg") no-repeat center center;
+  background: url("/img/b.jpg") no-repeat center center;
   background-size: cover;
 }
+
+@media screen and (min-width: 1100px) {
+  body {
+    background: none;
+  }
+}
+
 
 input {
   margin-top:15px;
@@ -36,6 +43,7 @@ input {
 
 video {
     display: none;
+    background:transparent url('/img/b.jpg') no-repeat 0 0;
 }
 
 @media screen and (min-width: 1100px) {
@@ -52,6 +60,11 @@ video {
       transform: translateX(-50%) translateY(-50%);
       transition: 1s opacity;
   }
+}
+
+#page {
+  background: url("/img/b.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 

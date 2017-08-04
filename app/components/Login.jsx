@@ -11,9 +11,6 @@ export class Login extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = {
-      count:1
-    };
   }
 
   onLogin = ()=>{
@@ -26,17 +23,11 @@ export class Login extends React.Component{
     history.push("/guest");
   }
 
-  handleEnd = ()=>{
-    var nextCount = this.state.count ==4? 1: this.state.count + 1;
-    this.setState({
-      count:nextCount
-    });
-  }
 
   render(){
     return (
       <div className="container login-container">
-        <Video onEnd={this.handleEnd} count={this.state.count}/>
+        <Video/>
         <div className="row">
           <div className="col-sm-8 col-sm-offset-2 main-window login-window">
             <h1 style={{color:"#f3f3f3",fontSize:"350%"}}>Welcome to Todo!</h1>

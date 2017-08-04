@@ -10,13 +10,6 @@ body {
   background-size: cover;
 }
 
-@media screen and (min-width: 1100px) {
-  body {
-    background: none;
-  }
-}
-
-
 input {
   margin-top:15px;
   margin-bottom:15px;
@@ -43,7 +36,6 @@ input {
 
 video {
     display: none;
-    background:transparent url('/img/b.jpg') no-repeat 0 0;
 }
 
 @media screen and (min-width: 1100px) {
@@ -62,10 +54,6 @@ video {
   }
 }
 
-#page {
-  background: url("/img/b.jpg") no-repeat center center;
-  background-size: cover;
-}
 
 
 .login-window{
